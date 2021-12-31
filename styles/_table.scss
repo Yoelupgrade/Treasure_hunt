@@ -1,0 +1,30 @@
+@include mobileS{
+    .map{
+        max-width: 80%;
+        max-height: 80%;
+    }
+    .x{
+        max-width: 80%;
+        max-height: 80%;
+    }
+    .backmap{
+        padding: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        width: 100%;
+        height: 100%;
+        
+    }
+}
+
+@include tablet{    
+    .x{
+        width: 100px;
+        height: 100px;
+    }
+    .map{
+        max-width: 100%;
+    }
+}
