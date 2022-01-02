@@ -8,22 +8,24 @@ const imgskull$ = "./images/skull.png";
 
 alert("VAMOS A CREAR NUESTRO MAPA PARA BUSCAR EL TESORO");
 
+//FUNCTION ROOT
 const start = () => {
   const rows = prompt("Introduce la cantidad de filas");
   const columns = prompt("Introduce la cantidad de columnas");
 
   const X = Math.floor(Math.random() * rows);
   const Y = Math.floor(Math.random() * columns);
-  console.log("X", X, "Y", Y);
+  //console.log("X", X, "Y", Y);
   print(rows, columns, X, Y);
-  console.log(rows, columns, X, Y);
+  //console.log(rows, columns, X, Y);
 };
 let games = 0;
 
 const print = (rows, columns, X, Y) => {
   let mapsum = rows * columns;
   let count$ = 0;
-
+  
+  //PRINT MAP
   for (let i = 0; i < rows; i++) {
     const rowsmap = document.createElement("tr");
     rowsmap.setAttribute("class", "rowsmap");
@@ -52,6 +54,7 @@ const print = (rows, columns, X, Y) => {
   }
 };
 
+//PRINT SCORE
 const printscore = (games, count$, mapsum) => {
   const rowscore = document.createElement("tr");
   const colummscore = document.createElement("td");
@@ -69,6 +72,7 @@ const printscore = (games, count$, mapsum) => {
   score$.appendChild(rowscore);
 };
 
+//RESET GAME
 const reset = (count$) => {
   setTimeout(() => {
     alert(
