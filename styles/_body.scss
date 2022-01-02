@@ -1,11 +1,20 @@
-body{
+@include mobileS {
+  body {
+    background-image: url(../images/back_map_mobile.png);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: lightblue;
+    //background-color: lightblue;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+}
+
+@include tablet {
+  body {
     background-image: url(../images/back_map.png);
-        background-repeat: no-repeat;
-        background-size:cover;
-        background-attachment: fixed;
+    background-size: cover;
+  }
 }

@@ -21,7 +21,7 @@ const start = () => {
 let games = 0;
 
 const print = (rows, columns, X, Y) => {
-  let mapsum = `${rows} Filas, ${columns} Columnas`;
+  let mapsum = rows * columns;
   let count$ = 0;
 
   for (let i = 0; i < rows; i++) {
@@ -30,7 +30,8 @@ const print = (rows, columns, X, Y) => {
 
     for (let j = 0; j < columns; j++) {
       const columnsmap = document.createElement("td");
-      columnsmap.innerHTML = `<img src="${imgmap$}" alt="Mapa del Tesoro" class="x"/>`;
+      columnsmap.setAttribute("class", "boxes");
+      columnsmap.innerHTML = `<img src="${imgmap$}" alt="Mapa del Tesoro" class="map"/>`;
       rowsmap.appendChild(columnsmap);
 
       columnsmap.addEventListener("click", () => {
@@ -38,12 +39,12 @@ const print = (rows, columns, X, Y) => {
         count$++;
         attemps$.innerHTML = `${count$}`;
         if (i == X && j == Y) {
-          columnsmap.innerHTML = `<img src="${imgchest$}" alt="Tesoro" class="map"/>`;
+          columnsmap.innerHTML = `<img src="${imgchest$}" alt="Tesoro" class="treasure"/>`;
           games++;
           printscore(games, count$, mapsum);
           reset(count$);
         } else {
-          columnsmap.innerHTML = `<img src="${imgskull$}" alt="Calavera" class="map"/>`;
+          columnsmap.innerHTML = `<img src="${imgskull$}" alt="Calavera" class="skull"/>`;
         }
       });
     }
@@ -61,7 +62,7 @@ const printscore = (games, count$, mapsum) => {
   colummscore3.setAttribute("class", "rowscore");
   colummscore.textContent = `${games}º`;
   colummscore2.textContent = count$;
-  colummscore3.textContent = mapsum;
+  colummscore3.textContent = `${mapsum} escondites`;
   rowscore.appendChild(colummscore);
   rowscore.appendChild(colummscore2);
   rowscore.appendChild(colummscore3);
@@ -78,7 +79,7 @@ const reset = (count$) => {
     const rows = document.querySelectorAll(".rowsmap");
     rows.forEach((row) => row.remove());
     start();
-  }, 100);
+  }, 500);
 };
 
 start();

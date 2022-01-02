@@ -1,57 +1,36 @@
-body {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  background-color: lightblue;
-  background-image: url(../images/back_map.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
+@import url("https://fonts.googleapis.com/css2?family=Pirata+One&family=The+Nautigal:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Pirata+One&family=The+Nautigal:wght@700&display=swap");
+@media only screen and (min-width: 320px) {
+  body {
+    background-image: url(../images/back_map_mobile.png);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+  }
 }
 
-.containerscore {
-  max-width: 80%;
-}
-
-.tscore {
-  text-align: center;
-  border: 2px solid white;
-  padding: 5%;
-}
-
-.tdhead {
-  font-weight: bold;
-  border: 2px solid goldenrod;
-  background-color: rgba(255, 255, 255, 0.508);
-}
-
-.rowscore {
-  padding: 2%;
-  border: 2px solid goldenrod;
-  background-color: rgba(255, 255, 255, 0.508);
+@media only screen and (min-width: 450px) {
+  body {
+    background-image: url(../images/back_map.png);
+    background-size: cover;
+  }
 }
 
 @media only screen and (min-width: 320px) {
-  .map {
-    max-width: 80%;
-    max-height: 80%;
-  }
-  .x {
-    max-width: 80%;
-    max-height: 80%;
-  }
-  .backmap {
-    padding: auto;
+  .headtitle {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -62,16 +41,145 @@ body {
         -ms-flex-pack: center;
             justify-content: center;
     width: 100%;
-    height: 100%;
+    margin-top: 5%;
+  }
+  .title {
+    font-family: 'Pirata One', cursive;
+    font-size: 200%;
+    text-shadow: 0px 0px 5px black, 0px 0px 10px goldenrod, 0px 0px 15px goldenrod;
+    -webkit-text-stroke: 0.02px goldenrod;
+    margin-right: 5%;
+  }
+  .icon {
+    -o-object-fit: contain;
+       object-fit: contain;
+    max-width: 20%;
+    -webkit-filter: drop-shadow(0px 0px 5px black) drop-shadow(0px 0px 10px goldenrod) drop-shadow(0px 0px 15px goldenrod);
+            filter: drop-shadow(0px 0px 5px black) drop-shadow(0px 0px 10px goldenrod) drop-shadow(0px 0px 15px goldenrod);
   }
 }
 
 @media only screen and (min-width: 450px) {
-  .x {
-    width: 100px;
-    height: 100px;
+  .title {
+    font-size: 500%;
+    -webkit-text-stroke: 0.2px goldenrod;
+  }
+  .icon {
+    -o-object-fit: contain;
+       object-fit: contain;
+    max-width: 30%;
+  }
+}
+
+@media only screen and (min-width: 320px) {
+  .containerscore {
+    -o-object-fit: contain;
+       object-fit: contain;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+    margin-bottom: 5%;
+  }
+  .tscore {
+    -o-object-fit: contain;
+       object-fit: contain;
+    width: 60%;
+    text-align: center;
+    padding: 1%;
+    border-radius: 10px;
+    font-family: 'Dancing Script', cursive;
+  }
+  .tdhead {
+    -o-object-fit: contain;
+       object-fit: contain;
+    font-weight: bold;
+    font-size: 80%;
+    border: 2px solid goldenrod;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 2%;
+    border-radius: 10px;
+  }
+  .rowscore {
+    padding: 2%;
+    font-size: 80%;
+    border: 2px solid goldenrod;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+  }
+}
+
+@media only screen and (min-width: 450px) {
+  .tdhead, .rowscore {
+    font-size: 160%;
+  }
+}
+
+@media only screen and (min-width: 320px) {
+  .backmap {
+    -o-object-fit: contain;
+       object-fit: contain;
+    max-width: 100vmax;
+    padding: 5%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .boardboxes {
+    -o-object-fit: contain;
+       object-fit: contain;
+    max-width: 100%;
+    border: 0px;
   }
   .map {
+    -o-object-fit: contain;
+       object-fit: contain;
+    max-width: 80%;
+    -webkit-filter: drop-shadow(0px 0px 5px black) drop-shadow(0px 0px 10px black);
+            filter: drop-shadow(0px 0px 5px black) drop-shadow(0px 0px 10px black);
+  }
+  .treasure {
+    -o-object-fit: contain;
+       object-fit: contain;
+    max-width: 80%;
+    -webkit-filter: drop-shadow(0px 0px 5px goldenrod) drop-shadow(0px 0px 10px goldenrod) drop-shadow(0px 0px 15px goldenrod);
+            filter: drop-shadow(0px 0px 5px goldenrod) drop-shadow(0px 0px 10px goldenrod) drop-shadow(0px 0px 15px goldenrod);
+  }
+  .skull {
+    -o-object-fit: contain;
+       object-fit: contain;
+    max-width: 80%;
+    -webkit-filter: drop-shadow(0px 0px 5px #a20000) drop-shadow(0px 0px 10px #a20000) drop-shadow(0px 0px 15px #a20000);
+            filter: drop-shadow(0px 0px 5px #a20000) drop-shadow(0px 0px 10px #a20000) drop-shadow(0px 0px 15px #a20000);
+  }
+  .h1att {
+    font-size: 110%;
+    font-family: 'Pirata One', cursive;
+    color: goldenrod;
+    background-color: rgba(0, 0, 0, 0.755);
+    padding-right: 3%;
+    padding-left: 3%;
+    border-radius: 10px;
+  }
+}
+
+@media only screen and (min-width: 450px) {
+  .h1att {
+    font-size: 200%;
+  }
+  .treasure, .skull, .map {
     max-width: 100%;
   }
 }

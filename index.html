@@ -13,6 +13,9 @@
    
   </head>
   <body>
+    <div class="headtitle">
+    <h1 class="title">Treasure Hunt</h1><img class="icon" src="./images/chest.png" alt="Tesoro">
+  </div>
     <div class="containerscore">
       <table class="tscore">
         <tbody data-function="score">
@@ -24,10 +27,10 @@
         </tbody>
       </table>
     </div>
-    <h1>Intentos: <span data-function="attempts"></span></h1>
+    <h1 class="h1att" >Intentos: <span data-function="attempts"></span></h1>
     <div class="backmap">    
-        <table>
-            <tbody data-function="board"></tbody>
+        <table class="boardboxes">
+            <tbody data-function="board" class="tbodymap"></tbody>
         </table>
     </div>
 </body>
