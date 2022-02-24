@@ -37,7 +37,7 @@ const print = (rows, columns, X, Y) => {
       rowsmap.appendChild(columnsmap);
 
       columnsmap.addEventListener("click", () => {
-        console.log(i, j);
+        // console.log(i, j);
         count$++;
         attemps$.innerHTML = `${count$}`;
         if (i == X && j == Y) {
